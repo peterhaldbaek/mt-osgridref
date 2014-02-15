@@ -1,0 +1,29 @@
+{
+  "name": "mt-osgb36",
+  "version": "0.0.1",
+  "description": "Ordnance Survey Grid Reference functions.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/peterhaldbaek/mt-osgb36.git"
+  },
+  "keywords": [
+    "osgb36",
+    "ordnance",
+    "survey",
+    "grid",
+    "reference"
+  ],
+  "author": "Peter Haldbæk <peter.haldbaek@gmail.com>",
+  "contributors": [
+    "Peter Haldbæk <peter.haldbaek@gmail.com> (https://github.com/peterhaldbaek)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peterhaldbaek/mt-osgb36/issues"
+  },
+  "homepage": "https://github.com/peterhaldbaek/mt-osgb36",
+  "dependencies": {
+    "mt-latlon": "0.0.2"
+  }
+}
