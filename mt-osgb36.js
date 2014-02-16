@@ -180,7 +180,7 @@
      */
     OsGridRef.prototype.toString = function(digits) {
       digits = (typeof digits == 'undefined') ? 10 : digits;
-      e = this.easting, n = this.northing;
+      var e = this.easting, n = this.northing;
       if (e==NaN || n==NaN) return '??';
       
       // get the 100km-grid indices
