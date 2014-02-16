@@ -60,7 +60,7 @@ var latlon = OsGridRef.osGridToLatLong(gridref);
 
 ### OsGridRef.parse(gridref)
 
-Converts standard grid reference (`SU387148`) to fully numeric reference (`[438700,114800]`). Returned coordinates are in metres, centred on supplied grid square.
+Converts standard grid reference ('SU387148') to fully numeric reference ([438700,114800]). Returned coordinates are in metres, centred on supplied grid square.
 
 - __gridref__ (string) Standard format OS grid reference
 
@@ -76,7 +76,7 @@ Copyright and license
 ---------------------
 
 The original code was written by Chris Veness and can be found at
-http://www.movable-type.co.uk/scripts/latlong.html. It is released under the
+http://www.movable-type.co.uk/scripts/latlong-gridref.html. It is released under the
 simple Creative Commons attribution license
 (http://creativecommons.org/licenses/by/3.0/).
 

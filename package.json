@@ -1,11 +1,11 @@
 {
-  "name": "mt-osgb36",
+  "name": "mt-osgridref",
   "version": "0.0.1",
   "description": "Ordnance Survey Grid Reference functions.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/peterhaldbaek/mt-osgb36.git"
+    "url": "https://github.com/peterhaldbaek/mt-osgridref.git"
   },
   "keywords": [
     "osgb36",
@@ -20,10 +20,10 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/peterhaldbaek/mt-osgb36/issues"
+    "url": "https://github.com/peterhaldbaek/mt-osgridref/issues"
   },
-  "homepage": "https://github.com/peterhaldbaek/mt-osgb36",
+  "homepage": "https://github.com/peterhaldbaek/mt-osgridref",
   "dependencies": {
-    "mt-latlon": "0.0.2"
+    "mt-latlon": "0.0.3"
   }
 }
