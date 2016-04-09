@@ -24,6 +24,6 @@
   },
   "homepage": "https://github.com/peterhaldbaek/mt-osgridref",
   "dependencies": {
-    "mt-latlon": "0.0.3"
+    "mt-latlon": "0.1.0"
   }
 }
