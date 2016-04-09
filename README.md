@@ -7,7 +7,9 @@ Ordnance Survey Grid Reference functions.
 Installation
 ------------
 
-    $ npm install mt-osgridref
+```sh
+$ npm install mt-osgridref
+```
 
 
 Usage
@@ -15,9 +17,11 @@ Usage
 
 The module contains methods for parsing and converting between Ordnance Survey grid reference easting/northing coordinates and (OSGB36) latitude/longitude coordinates. It is also a basic representation of an easting/northing coordinate.
 
-    var OsGridRef = require('mt-osgridref');
-    var point = new OsGridRef(651409, 313177);
-    var latlon = OsGridRef.osGridToLatLong(point);
+```js
+var OsGridRef = require('mt-osgridref');
+var point = new OsGridRef(651409, 313177);
+var latlon = OsGridRef.osGridToLatLong(point);
+```
 
 
 ### OsGridRef(easting, northing)
@@ -27,7 +31,7 @@ Creates a OsGridRef object.
 - __easting__ (number) Easting in metres from OS false origin
 - __northing__ (number) Northing in metres from OS false origin
 
-```
+```js
 var point = new OsGridRef(651409, 313177);
 ```
 
@@ -38,7 +42,7 @@ Convert (OSGB36) latitude/longitude to Ordnance Survey grid reference easting/no
 
 - __point__ (LatLon) OSGB36 latitude/longitude
 
-```
+```js
 var LatLon = require('mt-latlon');
 
 var latlon = new LatLon(51.5136, -0.0983);
@@ -52,7 +56,7 @@ Convert Ordnance Survey grid reference easting/northing coordinate to (OSGB36) l
 
 - __gridref__ (OsGridRef) easting/northing to be converted to latitude/longitude
 
-```
+```js
 var gridref = OsGridRef.parse('SU387148');
 var latlon = OsGridRef.osGridToLatLong(gridref);
 ```
@@ -64,7 +68,7 @@ Converts standard grid reference ('SU387148') to fully numeric reference ([43870
 
 - __gridref__ (string) Standard format OS grid reference
 
-```
+```js
 var gridref = OsGridRef.parse('SU387148');
 var latlon = OsGridRef.osGridToLatLong(gridref);
 ```
