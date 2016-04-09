@@ -31,12 +31,12 @@
      * @return {OsGridRef} OS Grid Reference easting/northing
      */
     OsGridRef.latLongToOsGrid = function(point) {
-      var lat = point.lat().toRad(); 
-      var lon = point.lon().toRad(); 
-      
+      var lat = toRad(point.lat());
+      var lon = toRad(point.lon());
+
       var a = 6377563.396, b = 6356256.910;          // Airy 1830 major & minor semi-axes
       var F0 = 0.9996012717;                         // NatGrid scale factor on central meridian
-      var lat0 = (49).toRad(), lon0 = (-2).toRad();  // NatGrid true origin is 49ºN,2ºW
+      var lat0 = toRad(49), lon0 = toRad(-2);        // NatGrid true origin is 49ºN,2ºW
       var N0 = -100000, E0 = 400000;                 // northing & easting of true origin, metres
       var e2 = 1 - (b*b)/(a*a);                      // eccentricity squared
       var n = (a-b)/(a+b), n2 = n*n, n3 = n*n*n;
@@ -124,8 +124,8 @@
       var dE = (E-E0), dE2 = dE*dE, dE3 = dE2*dE, dE4 = dE2*dE2, dE5 = dE3*dE2, dE6 = dE4*dE2, dE7 = dE5*dE2;
       lat = lat - VII*dE2 + VIII*dE4 - IX*dE6;
       var lon = lon0 + X*dE - XI*dE3 + XII*dE5 - XIIA*dE7;
-      
-      return new LatLon(lat.toDeg(), lon.toDeg());
+
+      return new LatLon(toDeg(lat), toDeg(lon));
     }
 
 
@@ -182,10 +182,10 @@
       digits = (typeof digits == 'undefined') ? 10 : digits;
       var e = this.easting, n = this.northing;
       if (e==NaN || n==NaN) return '??';
-      
+
       // get the 100km-grid indices
       var e100k = Math.floor(e/100000), n100k = Math.floor(n/100000);
-      
+
       if (e100k<0 || e100k>6 || n100k<0 || n100k>12) return '';
 
       // translate those into numeric equivalents of the grid letters
@@ -236,6 +236,18 @@
       module.exports = wrapper;
   } else {
       root.OsGridRef = wrapper(LatLon);
+  }
+
+  // ---- helper functions for converting degrees/radians
+
+  /** Converts numeric degrees to radians */
+  function toRad(value) {
+    return value * Math.PI / 180;
+  }
+
+  /** Converts radians to numeric (signed) degrees */
+  function toDeg(value) {
+    return value * 180 / Math.PI;
   }
 
 })(this);
