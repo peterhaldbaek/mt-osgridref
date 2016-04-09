@@ -1,6 +1,6 @@
 {
   "name": "mt-osgridref",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ordnance Survey Grid Reference functions.",
   "main": "index.js",
   "repository": {
